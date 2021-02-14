@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>tristan.rs</title>
+    <link rel="stylesheet" href="iosevka-fixed.css">
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <span class="derive">#[derive(Debug)]</span><br/>
+    <span class="pub">pub</span> <span class="fn">struct</span> <span class="type">Person</span> {<br/>
+    &nbsp;&nbsp;&nbsp;&nbsp;<span class="name">name</span>: <span class="type">String</span>,</br>
+    &nbsp;&nbsp;&nbsp;&nbsp;<span class="name">job</span>: <span class="type">Option</span>&lt;<span class="type">Job</span>&gt;,<br/>
+    &nbsp;&nbsp;&nbsp;&nbsp;<span class="name">email</span>: <span class="type">String</span>,<br/>
+    &nbsp;&nbsp;&nbsp;&nbsp;<span class="name">social</span>: <span class="type">Social</span>,<br/>
+    }<br/>
+    <br/>
+    <span class="derive">#[derive(Debug)]</span><br/>
+    <span class="pub">pub</span> <span class="fn">struct</span> <span class="type">Social</span> {<br/>
+    &nbsp;&nbsp;&nbsp;&nbsp;<span class="name">github</span>: <span class="type">String</span>,<br/>
+    &nbsp;&nbsp;&nbsp;&nbsp;<span class="name">instagram</span>: <span class="type">String</span>,<br/>
+    &nbsp;&nbsp;&nbsp;&nbsp;<span class="name">twitter</span>: <span class="type">String</span>,<br/>
+    &nbsp;&nbsp;&nbsp;&nbsp;<span class="name">untappd</span>: <span class="type">String</span>,<br/>
+    &nbsp;&nbsp;&nbsp;&nbsp;<span class="name">lastfm</span>: <span class="type">String</span>,<br/>
+    &nbsp;&nbsp;&nbsp;&nbsp;<span class="name">myanimelist</span>: <span class="type">String</span>,<br/>
+    }<br/>
+    <br/>
+    <span class="derive">#[derive(Debug)]</span><br/>
+    <span class="pub">pub</span> <span class="fn">struct</span> <span class="type">Job</span> {<br/>
+    &nbsp;&nbsp;&nbsp;&nbsp;<span class="name">title</span>: <span class="type">String</span>,<br/>
+    &nbsp;&nbsp;&nbsp;&nbsp;<span class="name">company_name</span>: <span class="type">String</span>,<br/>
+    &nbsp;&nbsp;&nbsp;&nbsp;<span class="name">company_website</span>: <span class="type">String</span>,<br/>
+    }<br/>
+    <br/>
+    <span class="pub">pub</span> <span class="fn">fn</span> <span class="fn-name">aboutme</span>() -&gt; <span class="type">Person</span> {<br/>
+    &nbsp;&nbsp;&nbsp;&nbsp;<span class="type">Person</span> {<br/>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="name">name</span>: <span class="str">&quot;Tristan King&quot;</span>.to_string(),<br/>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="name">email</span>: <span class="str">&quot;<a href="mailto:mail@tristan.rs">mail@tristan.rs</a>&quot;</span>.to_string(),<br/>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="name">job</span>: <span class="type">Some</span>(<span class="type">Job</span> {<br/>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="name">title</span>: <span class="str">&quot;Software Developer&quot;</span>.to_string(),<br/>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="name">company_name</span>: <span class="str">&quot;Bakken & Bæck&quot;</span>.to_string(),<br/>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="name">company_website</span>: <span class="str">&quot;<a href="https://bakkenbaeck.no">https://bakkenbaeck.no</a>&quot;</span>.to_string(),<br/>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}),<br/>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="name">social</span>: <span class="type">Social</span> {<br/>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="name">github</span>: <span class="str">&quot;<a href="https://github.com/tristan">https://github.com/tristan</a>&quot;</span>.to_string(),<br/>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="name">instagram</span>: <span class="str">&quot;<a href="https://instagram.com/t.l.king">https://instagram.com/t.l.king</a>&quot;</span>.to_string(),<br/>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="name">twitter</span>: <span class="str">&quot;<a href="https://twitter.com/tristanking">https://twitter.com/tristanking</a>&quot;</span>.to_string(),<br/>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="name">untappd</span>: <span class="str">&quot;<a href="https://untappd.com/user/sndwave0">https://untappd.com/user/sndwave0</a>&quot;</span>.to_string(),<br/>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="name">lastfm</span>: <span class="str">&quot;<a href="https://last.fm/user/lessthantristan">https://last.fm/user/lessthantristan</a>&quot;</span>.to_string(),<br/>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="name">myanimelist</span>: <span class="str">&quot;<a href="https://myanimelist.net/profile/sndwave">https://myanimelist.net/profile/sndwave</a>&quot;</span>.to_string(),<br/>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br/>
+    &nbsp;&nbsp;&nbsp;&nbsp;}<br/>
+    }<br/>
+    <br/>
+    <span class="fn">fn</span> <span class="fn-name">main</span>() {<br/>
+    &nbsp;&nbsp;&nbsp;&nbsp;<b>println!</b>(<span class="str">&quot;{:?}&quot;</span>, aboutme());<br/>
+    }<br/>
+  </body>
+</head>

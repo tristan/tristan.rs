@@ -1,0 +1,16 @@
+html, body {
+    height: 100%;
+    background-color: #3F3F3F;
+    color: #DCDCCC;
+    font-family: 'Iosevka Fixed Web';
+    font-size: 18pt;
+}
+
+a { color: #CC9393; }
+
+.derive { color: #94BFF3; } /* zenburn-blue+1 */
+.pub, .struct, .fn { color: #F0DFAF; } /* .zenburn-yellow */
+.type { color: #7CB8BB; } /* zenburn-blue-1 */
+.name { color: #DFAF8F; } /* zenburn-orange */
+.fn-name { color: #93E0E3; } /* zenburn-cyan */
+.str { color: #CC9393; } /* zenburn-red */
